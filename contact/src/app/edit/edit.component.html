@@ -1,0 +1,23 @@
+<form #contactForm="ngForm" class="contact-form" (ngSubmit)="onSubmit(contactForm.value)">
+	<app-header>
+		  <button class="leftnav cancel" type="reset">
+		    Cancel
+		  </button>
+		  <button class="rightnav submit" type="submit" [disabled]="!contactForm.form.valid">
+		    Finish
+		  </button>
+	</app-header>
+	<div class="main">
+		<div class="avator">
+			<input type="image" name="avator">
+		</div>
+		<div class="info">
+			<div class="name">
+				<input type="text" name="name" placeholder="name" required ngModel>
+			</div>
+			<div class="tel">
+				<input type="text" name="tel" placeholder="tel number" required ngModel>
+		 	</div>
+	 	</div>
+ 	</div>
+</form>

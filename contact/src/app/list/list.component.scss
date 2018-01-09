@@ -1,0 +1,35 @@
+btn-header {
+	padding: 0 15px;
+}
+ul,li{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+ul.contacts{
+	width: 100%;
+	text-align:center;
+	& li{
+		width:100%;
+		padding:5px 0;
+		position:relative;
+		display:flex;
+		align-items:center;
+		& .avator {
+			display:block;
+			width:60px;
+			height:60px;
+			background:#cccccc;
+			border:1px solid #cccccc;
+		}
+		& .name{
+			padding:15px;
+		}
+		& .tel {
+			position:absolute;
+			right:0;
+			padding-right:35px;
+			display:inline-block;
+		}
+	}
+}

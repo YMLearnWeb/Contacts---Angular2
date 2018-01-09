@@ -1,0 +1,15 @@
+<app-header>
+	  <button class="leftnav btn-header">
+	    Back
+	  </button>
+	  <button class="rightnav btn-header" [routerLink]="['/add']">
+	    +
+	  </button>
+</app-header> 
+<ul class="contacts">
+	<li *ngFor = "let contact of contacts" class={{contact.id}}>
+		<span class="avator"><img src={{contact.avator}} /></span>
+		<span class="name">{{contact.name}}</span>
+		<span class="tel">{{contact.tel}}</span>
+	</li>
+<ul>
