@@ -1,3 +1,23 @@
-<p>
-  detail works!
-</p>
+<div class="detail">
+		<app-header>
+		  <button class="leftnav cancel" [routerLink]="['/list']">
+		    Back
+		  </button>
+		  <button class="rightnav submit" [routerLink]="['/edit',(id+1)]">
+		    Edit
+		  </button>
+	</app-header>
+	<div class="main">
+		<div class="avator">
+			<img src="{{avator}}">
+		</div>
+		<div class="info">
+			<div class="name">
+				{{name}}
+			</div>
+			<div class="tel">
+				{{tel}}
+		 	</div>
+	 	</div>
+ 	</div>
+</div>

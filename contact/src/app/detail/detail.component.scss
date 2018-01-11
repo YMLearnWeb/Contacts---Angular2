@@ -1,0 +1,19 @@
+	.detail {
+		& .main {
+			display:flex;
+			align-items: center;
+		}
+		& .avator {
+			width:60px;
+			height:60px;
+			border-radius: 25%;
+			border:1px solid #cccccc;
+		}
+		& .info {
+			padding-left:15px;
+			& input {
+				border: 0;
+				border-bottom: 2px solid #cccccc;
+			}
+		}
+}

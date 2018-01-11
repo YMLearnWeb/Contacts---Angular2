@@ -1,7 +1,10 @@
 <form #contactForm="ngForm" class="contact-form" (ngSubmit)="onSubmit(contactForm.value)">
 	<app-header>
-		  <button class="leftnav cancel" type="reset">
+		  <button class="leftnav cancel" type="reset" *ngIf  = "addType" [routerLink] = "['/list']">
 		    Cancel
+		  </button>
+		  <button class="leftnav cancel" *ngIf = "!addType" [routerLink] = "['/list']">
+		    Back
 		  </button>
 		  <button class="rightnav submit" type="submit" [disabled]="!contactForm.form.valid">
 		    Finish
@@ -9,15 +12,19 @@
 	</app-header>
 	<div class="main">
 		<div class="avator">
-			<input type="image" name="avator">
+			<input type="file" name="avator" id="avator" (change) = "onChange($event)">
+			<img #avator src={{avator}} alt="avator">
 		</div>
 		<div class="info">
 			<div class="name">
-				<input type="text" name="name" placeholder="name" required ngModel>
+				<input type="text" name="name" placeholder="name" required [(ngModel)]="name">
 			</div>
 			<div class="tel">
-				<input type="text" name="tel" placeholder="tel number" required ngModel>
+				<input type="text" name="tel" placeholder="tel number" required [(ngModel)]="tel">
 		 	</div>
 	 	</div>
  	</div>
+ 	<div class="del" *ngIf = "!addType">
+ 		<button type="button" class="del-btn" (click)="delContact()">Delete Contact</button>
+  	</div>
 </form>

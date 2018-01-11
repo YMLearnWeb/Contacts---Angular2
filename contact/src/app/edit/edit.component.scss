@@ -8,12 +8,38 @@ form.contact-form {
 		height:60px;
 		border-radius: 25%;
 		border:1px solid #cccccc;
+		position:relative;
+		& #avator {
+			border:0;
+			-webkit-appearance:none;
+			opacity: 0;
+			position:absolute;
+			left:0;
+			right:0;
+			width:100%;
+			height:100%;
+		}
 	}
 	& .info {
 		padding-left:15px;
 		& input {
 			border: 0;
 			border-bottom: 2px solid #cccccc;
+		}
+	}
+	& .del {
+		display:block;
+		width:100%;
+		padding:15px;
+		& button {
+			background-color: transparent;
+			color: red;
+			padding:0 15px;
+			border:1px solid red;
+			font-weight:600;
+			width:auto;
+			margin:0 auto;
+			display: block;
 		}
 	}
 }
